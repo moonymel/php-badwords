@@ -1,6 +1,7 @@
 <?php 
     $bad_word = $_GET['bad_word'];
     $my_text = $_GET['my_text'];
+    $my_new_text = str_replace($bad_word, '***', $my_text)
 ?>
 
 <!DOCTYPE html>
@@ -20,6 +21,12 @@
                 <?php echo $my_text ?>
                 <h4>Lunghezza del testo:</h4>
                 <?php echo strlen($my_text); ?> caratteri.
+            </div>
+            <div class="col-6">
+                <h3>Il tuo testo censurato:</h3>
+                <?php echo $my_new_text ?>
+                <h4>Lunghezza del testo censurato:</h4>
+                <?php echo strlen($my_new_text); ?> caratteri.
             </div>
         </div>
     </div>
